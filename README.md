@@ -2,236 +2,132 @@
 
 ---
 
-## 📝 1. Nano
-**Nano** adalah editor teks berbasis terminal yang mudah digunakan di Linux.  
-Untuk membuka file dengan Nano, gunakan perintah:
-```bash
-nano nama_file
-```
-Tampilan antarmuka nano
-```bash
-GNU nano 6.2                    nama_file                                
-                                                                       
-Isi file ditampilkan di sini...
-                                                                       
-^G Get Help  ^O Write Out  ^W Where Is  ^K Cut Text  ^J Justify        
-^X Exit      ^R Read File  ^\ Replace   ^U Paste Text  ^T To Spell     
-```
-Tampilan nano
-
-![Tampilan antarmuka nano](https://github.com/telloze/TUGAS-SISTEM-OPERASI/blob/main/antarmuka.png)
-*Keterangan:  
-^ berarti tombol Ctrl.  
-Misalnya, ^X berarti tekan Ctrl + X untuk keluar.*  
+## 📝 1. Login sebagai studentOS dan lihat status proses, perhatikan kolom keluaran ps –au sebagai berikut :
   
-**Shortcut**  
-| Pintasan  | Fungsi                          |
-|-----------|---------------------------------|
-| Ctrl + O  | Simpan file (Write Out)        |
-| Ctrl + X  | Keluar dari Nano               |
-| Ctrl + W  | Mencari teks dalam file        |
-| Ctrl + K  | Memotong (cut) baris teks      |
-| Ctrl + U  | Menempelkan (paste) teks       |
-| Ctrl + G  | Menampilkan bantuan (Help)     |
-| Ctrl + R  | Membuka file lain dalam Nano   |
-| Ctrl + T  | Mengecek ejaan dalam teks      |  
-
-  **Opsi-opsi nano** 
-    
-  Mode read only  
-  ```bash
-nano -v nama_file.txt
-```
-Menampilkan nomor dan baris  
-  ```bash
-nano -c nama_file.txt
-```
-Auto-indent saat mengetik kode  
-  ```bash
-nano -i nama_file.txt
-```
-Mengaktifkan fitur mouse  
-  ```bash
-nano -m nama_file.txt
-```
-Highlight syntax  
-  ```bash
-nano -l nama_file.txt
-```
-
----
-
- ## 📝 2. -V  
-Opsi **-v** biasanya berarti *"verbose"* (menampilkan lebih banyak detail). Namun, maknanya bisa berbeda tergantung perintah yang digunakan.  
-
-Menampilkan versi nano  
-```bash
-nano -V
-```
-Menampilkan versi python
-```bash
-python -v
-```
-atau
-```bash
-python3 -v
-```
-Menyortir file secara alami
-```bash
-ls -v
-```
-Menampilkan baris yang tidak cocok
-```bash
-grep -v "error" log.txt
-```
-menampilkan karakter tersembunyi
-```bash
-cat -v file.txt
-```
-Menampilkan perubahan izin file
-```bash
-chmod -v
-```
-Menampilkan detail copy file
-```bash
-cp -v file1.txt backup/
-```
-
-  ---
-    
-## 📝 3. Vi / Vim - Editor Teks yang Lebih Kompleks  
-**Vi** (Visual Editor) adalah editor teks bawaan di Linux yang lebih canggih daripada Nano.
-Versi yang lebih modern dan populer disebut **Vim** (Vi Improved).  
-Membuka file dengan vi
-```bash
-vi nama_file.txt
-```
-atau
-```bash
-vim nama_file.txt
-```
-
-Perintah dasar vi
-| Perintah | Fungsi |
-|----------|--------|
-| `i`      | Masuk ke mode Insert (untuk mengetik) |
-| `Esc`    | Kembali ke Normal Mode |
-| `:w`     | Simpan file |
-| `:q`     | Keluar dari Vi |
-| `:wq`    | Simpan dan keluar |
-| `:q!`    | Keluar tanpa menyimpan |
-| `dd`     | Hapus satu baris |
-| `yy`     | Copy satu baris |
-| `p`      | Paste hasil copy |
-
-Vi mode read only
-```bash
-vi -R nama_file.txt
-```
-bisa di edit dengan
-```bash
-:wq!
-```
- ---
-## 📝 4. Kalkulator Sederhana nano
-
-Membuat file py 
-```bash
-nano kalkulator.py
-```
-Memasukkan Kode python kalkulator sederhana
-```bash
-# Kalkulator Sederhana dengan Python
-
-def tambah(x, y):
-    return x + y
-
-def kurang(x, y):
-    return x - y
-
-def kali(x, y):
-    return x * y
-
-def bagi(x, y):
-    if y != 0:
-        return x / y
-    else:
-        return "Tidak bisa membagi dengan nol!"
-
-print("Pilih operasi:")
-print("1. Tambah")
-print("2. Kurang")
-print("3. Kali")
-print("4. Bagi")
-
-pilihan = input("Masukkan pilihan (1/2/3/4): ")
-
-angka1 = float(input("Masukkan angka pertama: "))
-angka2 = float(input("Masukkan angka kedua: "))
-
-if pilihan == '1':
-    print(f"{angka1} + {angka2} = {tambah(angka1, angka2)}")
-elif pilihan == '2':
-    print(f"{angka1} - {angka2} = {kurang(angka1, angka2)}")
-elif pilihan == '3':
-    print(f"{angka1} * {angka2} = {kali(angka1, angka2)}")
-elif pilihan == '4':
-    print(f"{angka1} / {angka2} = {bagi(angka1, angka2)}")
-else:
-    print("Pilihan tidak valid")
-```
+## A. Sebutkan nama-nama proses yang bukan root
+![image](https://github.com/user-attachments/assets/13d9450f-30b7-400f-83f3-788c808861f1)
   
-![image](https://github.com/user-attachments/assets/318c0182-41cd-444d-ac5c-aa81e03e35ab)
+Yang bukan root :  
+* */usr/bin/zsh*  
+* *ps -au*  
 
-simpan dan keluar dari menu nano  
-*ctrl+x -> y -> enter*
+## B. Tulis PID dan COMMAND dari proses yang paling banyak menggunakan CPU time 
 
-Menjalankan kode python
+**COMMAND** : /usr/lib/xorg/Xorg  
+**PID** : 625  
+
+## C. Sebutkan buyut proses dan PID dari proses tersebut.  
+
+
+![image](https://github.com/user-attachments/assets/dd4fb306-9bf2-47f4-b555-bbd243f614a8)
+
+![image](https://github.com/user-attachments/assets/16121bfd-6afd-49a6-a330-a62985101a07)  
+**Buyut Proses** : systemd (1)  
+
+## D. Sebutkan beberapa proses daemon.  
+
+![image](https://github.com/user-attachments/assets/f7b2f8cd-8210-4034-b27d-fe81e274d3fb)  
+**Proses daemon** 
+* */usr/bin/dbus-daemon --system ...*  
+* */usr/libexec/rtkit-daemon*  
+* */usr/bin/gnome-keyring-daemon*  
+* *usr/sbin/NetworkManager --no-daemon*  
+* */usr/libexec/accounts-daemon*
+
+## E. Pada prompt login lakukan hal-hal sebagai berikut :  
 ```bash
-python3 kalkulator.py
+$ csh
 ```
-**Hasil**  
-*Penjumlahan*  
-![Tampilan antarmuka nano](https://github.com/telloze/TUGAS-SISTEM-OPERASI/blob/main/tambah.jpg)  
-*Pengurangan*  
-![Tampilan antarmuka nano](https://github.com/telloze/TUGAS-SISTEM-OPERASI/blob/main/kurang.jpg)  
-*Perkalian*  
-![Tampilan antarmuka nano](https://github.com/telloze/TUGAS-SISTEM-OPERASI/blob/main/kali.jpg)  
-*Pembagian*  
-![Tampilan antarmuka nano](https://github.com/telloze/TUGAS-SISTEM-OPERASI/blob/main/bagi.jpg)  
+```bash
+$ who
+```
+```bash
+$ bash
+```
+```bash
+$ ls
+```
+```bash
+$ sh
+```
+```bash
+$ ps
+```
+![image](https://github.com/user-attachments/assets/9e924c52-85d2-46ce-a336-51d425cfb274)  
+
+#
+
+## 📝 2. Modifikasi program prog.sh sebagai berikut :  
+```bash
+$ vi prog.sh
+#!/bin/sh
+trap “echo Hello Goodbye ; exit 0 “ 1 2 3 15
+echo “Program berjalan …”
+while :
+do
+echo “X”
+sleep 20
+done
+```
+![image](https://github.com/user-attachments/assets/0f56ab90-2c64-4159-840b-5cfb3c2062c6)  
   
-## 📝 4. Kalkulator Sederhana vi
-```bash
-vi kalkulator.py
-```
-Masukkan kode yang sama  
+Jalankan program tersebut sebagai background. Coba lakukan kil dengan nomor sinyal 1, 2, 3
+dan 15 pada nomor PID proses tersebut. Apakah proses berhenti atau tetap berjalan ? Nomor
+sinyal berapa yang digunakan untuk menghentikan proses diatas ?  
 
-Keluar dengan 
+![image](https://github.com/user-attachments/assets/89349f8c-7930-457c-a4e8-f4977e512eb9)  
+**Program berhenti menggunakan sinyal 1**  
+
+#
+
+## 📝 3. Modifikasi program  
+
+myjob.sh. Buatlah trap sedemikian rupa, sehingga bila proses tersebut dihentikan (kill), otomatis
+file berkas akan terhapus. 
 ```bash
-:wq
+$ vi myjob.sh
+#!/bin/sh
+trap ______________________________
+i=1
+while :
+do
+ find / -print > berkas
+ sort berkas –o hasil
+ echo “Proses selesai pada „date‟” >> proses.log
+sleep 60
+done
+$ kill –15 [Nomor PID]
+$ ls -l
 ```
 
-Menjalankan kode python
-```bash
-python3 kalkulator.py
-```
+![image](https://github.com/user-attachments/assets/9123d638-27f4-4be4-b205-97fa2fdda04b)  
 
-## 📝 5. Kalkulator Sederhana vim
+**Running Program**  
+![image](https://github.com/user-attachments/assets/a04c6f19-ac70-428c-a034-d9a73f900d27)
+![image](https://github.com/user-attachments/assets/1b998fa5-4ad8-4a6c-9f91-6e521bf42c8c)  
 
-```bash
-vim kalkulator.py
-```
-Masukkan kode yang sama  
+**Stop Program**  
+![image](https://github.com/user-attachments/assets/564a43ba-b90a-4524-9d2c-3f5a71b78524)  
 
-Keluar dengan 
-```bash
-:wq
-```
+**Program terhapus otomatis**  
+![image](https://github.com/user-attachments/assets/465afd7b-87b1-4c21-a9e3-a93f6c21f61f)
 
-Menjalankan kode python
-```bash
-python3 kalkulator.py
-```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
